@@ -1,0 +1,52 @@
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+/* Dashboard/list pages ka background alag rakhte hain (gradient sirf login/register pe accha lagta hai) */
+body:has(.navbar) {
+  background: #f0f4f8;
+}
+
+.card {
+  border-radius: 12px;
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-primary {
+  background-color: #2759c7;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #2563eb, #1e40af) !important;
+}
+
+/* Dashboard stat cards ko color deते hain */
+.stat-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.stat-icon.patients { color: #2563eb; }
+.stat-icon.doctors { color: #df1825; }
+.stat-icon.appointments { color: #0cca08; }
+
+/* Loading spinner */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
