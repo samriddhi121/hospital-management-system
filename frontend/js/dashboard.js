@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://hospital-management-system-h202.onrender.com/api/auth';
 
 // Pehle check karo ki user logged in hai ya nahi
 const token = localStorage.getItem('token');
