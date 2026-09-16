@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api/auth';
+const API_URL = 'https://hospital-management-system-h202.onrender.com/api/auth';
 
 document.getElementById('loginForm').addEventListener('submit', async (e) => {
   e.preventDefault();
