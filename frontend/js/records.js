@@ -1,4 +1,4 @@
-const token = localStorage.getItem('token');
+const API_URL = 'https://hospital-management-system-h202.onrender.com/api/auth';
 const user = JSON.parse(localStorage.getItem('user'));
 
 if (!token) {
