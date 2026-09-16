@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api/appointments';
+const API_URL = 'https://hospital-management-system-h202.onrender.com/api/auth';
 const token = localStorage.getItem('token');
 
 if (!token) {
