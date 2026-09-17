@@ -9,6 +9,15 @@ if (!token) {
   window.location.href = 'index.html';
 }
 
+window.addEventListener('pageshow', function(event) {
+  if (event.persisted) {
+    const currentToken = localStorage.getItem('token');
+    if (!currentToken) {
+      window.location.href = 'index.html';
+    }
+  }
+});
+
 // User ka naam dikhao
 document.getElementById('userName').textContent = `${user.name} (${user.role})`;
 
