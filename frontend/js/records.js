@@ -4,7 +4,14 @@ const user = JSON.parse(localStorage.getItem('user'));
 if (!token) {
   window.location.href = 'index.html';
 }
-
+window.addEventListener('pageshow', function(event) {
+  if (event.persisted) {
+    const currentToken = localStorage.getItem('token');
+    if (!currentToken) {
+      window.location.href = 'index.html';
+    }
+  }
+});
 // Role ke hisaab se decide karo kaunsa API call karna hai
 const isAdmin = user.role === 'admin';
 const API_URL = isAdmin
