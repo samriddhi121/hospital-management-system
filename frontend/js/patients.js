@@ -4,7 +4,14 @@ const token = localStorage.getItem('token');
 if (!token) {
   window.location.href = 'index.html';
 }
-
+window.addEventListener('pageshow', function(event) {
+  if (event.persisted) {
+    const currentToken = localStorage.getItem('token');
+    if (!currentToken) {
+      window.location.href = 'index.html';
+    }
+  }
+});
 // Sab patients load karke table mein dikhao
 async function loadPatients() {
   const errorBox = document.getElementById('errorMessage');
