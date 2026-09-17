@@ -1,4 +1,4 @@
-const API_URL = 'https://hospital-management-system-h202.onrender.com/api/auth';
+const API_URL = 'https://hospital-management-system-h202.onrender.com/api/patients';
 const token = localStorage.getItem('token');
 
 if (!token) {
