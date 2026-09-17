@@ -5,6 +5,15 @@ if (!token) {
   window.location.href = 'index.html';
 }
 
+window.addEventListener('pageshow', function(event) {
+  if (event.persisted) {
+    const currentToken = localStorage.getItem('token');
+    if (!currentToken) {
+      window.location.href = 'index.html';
+    }
+  }
+});
+
 async function loadDoctors() {
   const errorBox = document.getElementById('errorMessage');
   const spinner = document.getElementById('loadingSpinner');
